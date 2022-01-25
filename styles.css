@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e5e5e5;
+  background-color: #e6ebf2;
   display: flex;
   padding-top: 5rem;
   justify-content: center;
@@ -31,7 +31,6 @@ body {
 
 .item {
   width: 255px;
-  /* height: 66px; */
   border: 1px solid #eee;
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
   border-radius: 4px;
@@ -42,13 +41,24 @@ body {
   cursor: grab;
 }
 
+.placeholder--planned .item {
+  border-top: 3px solid #fc86e5;
+}
+
+.placeholder--in-development .item {
+  border-top: 3px solid #41bbe9;
+}
+
+.placeholder--done .item {
+  border-top: 3px solid #8ae6d4;
+}
+
 .item:active {
   cursor: grabbing;
 }
 
 .placeholder {
-  width: 255px;
-  height: 66px;
+  width: 255px;min-height: 187px;
 }
 
 .start {
@@ -61,4 +71,18 @@ body {
 
 .done {
   background: linear-gradient(90deg, #8fd3f4, #84fab0 100%);
+}
+
+.hold {
+  border: 1px dashed #969696;
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border-radius: 4px;
+  background-color: rgb(255 255 255 / 50%);
+  border: 1px dashed #969696;
 }
